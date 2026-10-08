@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O Amazonas: o que aconteceu e o que está em jogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="dentro">
+    <a class="marca" href="#inicio">🛶 <span class="txt">O Amazonas</span></a>
+    <button class="pilula" id="pilula" aria-label="Ver sua árvore e suas sementes">
+      <span aria-hidden="true">🌱</span><span id="contador">0 de 30</span>
+      <span class="barrinha" aria-hidden="true"><i id="barrinha"></i></span>
+    </button>
+    <button class="botao-letra" id="letra" aria-pressed="false" aria-label="Aumentar o tamanho da letra">A+</button>
+  </div>
+</header>
+
+<main>
+<!-- ================= ABERTURA ================= -->
+<section class="abertura" id="inicio">
+  <svg class="ondas" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 120 C 200 60, 380 180, 600 120 S 1000 60, 1220 130"/>
+    <path d="M-20 190 C 220 140, 420 250, 640 190 S 1020 130, 1220 200"/>
+    <path d="M-20 255 C 240 215, 440 300, 660 255 S 1040 205, 1220 260"/>
+  </svg>
+  <div class="largura">
+    <h1><small>Uma viagem pelo</small>Amazonas</h1>
+    <p class="chamada">Vamos conhecer o que aconteceu no Amazonas durante os últimos governos, o que mudou na vida de quem mora aqui e o que pode vir pela frente.</p>
+    <a class="botao-grande" href="#mapa">Começar a viagem <span aria-hidden="true">🛶</span></a>
+    <div class="como">
+      <div><b aria-hidden="true">👆</b>Toque nas coisas para ver mais</div>
+      <div><b aria-hidden="true">🔊</b>Aperte “Ouvir” para escutar o texto</div>
+      <div><b aria-hidden="true">🌱</b>Cada descoberta faz sua árvore crescer</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAPA ================= -->
+<section id="mapa">
+  <div class="largura">
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">🗺️</div>
+      <div>
+        <h2>O mapa do Amazonas</h2>
+        <p>Toque num ponto do mapa para ver o que aconteceu ali e o que pode mudar.</p>
+      </div>
+    </div>
+    <div class="mapa-grade">
+      <div>
+        <div class="mapa-caixa">
+          <svg id="mapa-svg" viewBox="0 0 940 640" role="group" aria-label="Mapa do estado do Amazonas com pontos para tocar"></svg>
+          <div class="legenda">
+            <span><i style="background:var(--acai)"></i>Antes (2019 a 2022)</span>
+            <span><i style="background:var(--rio)"></i>Depois (2023 a 2026)</span>
+            <span><i style="background:var(--jambu)"></i>Proposta de Flávio</span>
+            <span><i style="background:var(--leaf)"></i>Proposta de Lula</span>
+          </div>
+        </div>
+        <div class="chips" id="chips-lugares" aria-label="Ou escolha o lugar pela lista"></div>
+      </div>
+      <div class="painel vazio" id="painel" aria-live="polite">
+        <span class="grande" aria-hidden="true">👆</span>
+        <strong>Escolha um lugar no mapa</strong><br>
+        São 8 lugares. Cada um que você abrir vale uma semente 🌱
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PASSADO ================= -->
+<section id="passado">
+  <div class="largura">
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">⏳</div>
+      <div>
+        <h2>O que aconteceu de 2019 a 2022</h2>
+        <p>Os casos mais graves no Amazonas durante o governo Bolsonaro. Passe para o lado para ver o próximo.</p>
+      </div>
+    </div>
+    <div class="trilho-caixa">
+      <div class="trilho" id="trilho" tabindex="0" aria-label="Linha do tempo, role para o lado"></div>
+      <div class="controles">
+        <button class="seta" id="volta" aria-label="Acontecimento anterior">‹</button>
+        <div class="pontinhos" id="pontinhos"></div>
+        <button class="seta" id="vai" aria-label="Próximo acontecimento">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROPOSTAS ================= -->
+<section id="propostas">
+  <div class="largura">
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">📜</div>
+      <div>
+        <h2>Propostas: Flávio x Lula</h2>
+        <p>Do plano de governo “Para o Brasil Vencer o Atraso” (2027 a 2030). Leia a proposta de Flávio e vire o cartão para ver o risco para o Amazonas e o que Lula propõe no lugar.</p>
+      </div>
+    </div>
+    <div class="destaque-zfm">
+      <h3><span aria-hidden="true">🏭</span> Zona Franca e empregos: o que cada um propõe</h3>
+      <div class="ringue">
+        <div class="canto f">
+          <div class="quem"><b aria-hidden="true">F</b>Flávio Bolsonaro</div>
+          <div class="placa"><strong>⚠️</strong><span>Corte de impostos no país inteiro</span></div>
+          <ul>
+            <li>Baixar os impostos em todo o Brasil e acabar com boa parte dos tratamentos especiais.</li>
+            <li>As fábricas ficam em Manaus porque lá pagam menos imposto. Se o país todo pagar menos, Manaus perde essa vantagem.</li>
+            <li>Empresas podem ir embora, levando empregos junto.</li>
+          </ul>
+          <div style="margin-top:.7rem"><button class="ouvir" type="button" aria-pressed="false" data-falar="Zona Franca e empregos. Flávio propõe baixar os impostos no país inteiro e acabar com boa parte dos tratamentos especiais. As fábricas ficam em Manaus porque lá pagam menos imposto. Se o país todo pagar menos, Manaus perde a vantagem, e empresas podem ir embora levando empregos.">🔊 Ouvir</button></div>
+          <p class="fonte">Fonte: plano de governo “Para o Brasil Vencer o Atraso”, registrado no TSE.</p>
+        </div>
+        <div class="canto l">
+          <div class="quem"><b aria-hidden="true">L</b>Lula</div>
+          <div class="placa"><strong>R$ 860 bi</strong><span>em financiamentos para a indústria brasileira entre 2023 e 2026</span></div>
+          <ul>
+            <li><strong>Zona Franca protegida:</strong> manter por completo os benefícios garantidos na Constituição.</li>
+            <li><strong>Reindustrialização:</strong> fortalecer a Nova Indústria Brasil para gerar empregos mais qualificados.</li>
+            <li><strong>Feito no Brasil:</strong> produzir aqui o que hoje o país compra de fora, o que ajuda a segurar os preços.</li>
+            <li><strong>Indústria da floresta em pé:</strong> incentivar fábricas de remédios, alimentos e cosméticos feitos com a biodiversidade da Amazônia.</li>
+            <li>A indústria brasileira foi a 6ª que mais cresceu no G20 entre 2023 e 2025.</li>
+          </ul>
+          <div style="margin-top:.7rem"><button class="ouvir" type="button" aria-pressed="false" data-falar="Lula propõe manter por completo os benefícios da Zona Franca e fortalecer a reindustrialização do Brasil com a Nova Indústria Brasil. A ideia é gerar empregos mais qualificados e produzir aqui produtos que hoje o Brasil compra de fora, o que ajuda a segurar os preços. Na Amazônia, o plano quer incentivar indústrias de remédios, alimentos e cosméticos feitos com a floresta em pé. Entre 2023 e 2026, a Nova Indústria Brasil liberou 860 bilhões de reais em financiamentos, e a indústria brasileira foi a sexta que mais cresceu no G20 entre 2023 e 2025.">🔊 Ouvir</button></div>
+          <p class="fonte">Fontes: plano de governo de Lula registrado no TSE (capítulo 8, “Indústria ainda mais forte, inovadora e verde” e “Desenvolvimento Regional”) e Portal Amazônia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cartoes" id="cartoes"></div>
+    <p class="plano-links">Quer ler os planos completos de Flávio e de Lula? Estão no site do TSE: <a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noopener">divulgacandcontas.tse.jus.br</a> (Eleições Gerais 2026, Presidente, propostas de governo). O Poder360 publicou cópias do <a href="https://static.poder360.com.br/uploads/2026/08/plano-flavio.pdf" target="_blank" rel="noopener">plano de Flávio</a> e do <a href="https://static.poder360.com.br/uploads/2026/08/Programa-Governo-LULA-2026.pdf" target="_blank" rel="noopener">plano de Lula</a>. No mesmo site do TSE você pode comparar com os planos dos outros candidatos.</p>
+  </div>
+</section>
+
+<!-- ================= COMPARAR ================= -->
+<section id="comparar">
+  <div class="largura">
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">⚖️</div>
+      <div>
+        <h2>Antes e depois: os números</h2>
+        <p>Como o Amazonas estava no governo Bolsonaro (2019 a 2022) e no governo Lula (2023 a 2026). Escolha um tema.</p>
+      </div>
+    </div>
+    <div class="temas" id="temas" role="tablist" aria-label="Temas para comparar"></div>
+    <div class="grafico-caixa" id="grafico" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= LULA X FLÁVIO ================= -->
+<section id="duelo">
+  <div class="largura">
+    <div class="alerta-faixa"><i aria-hidden="true"></i>Atenção</div>
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">🆚</div>
+      <div>
+        <h2>Lula x Flávio: quem é quem</h2>
+        <p>Antes de votar, veja o que cada um fez. Tudo com fonte. Escolha um tema.</p>
+      </div>
+    </div>
+    <div class="temas" id="duelo-temas" role="tablist" aria-label="Temas Lula x Flávio"></div>
+    <div class="duelo-caixa" id="duelo-painel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= JOGO ================= -->
+<section id="jogo">
+  <div class="largura">
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">🎮</div>
+      <div>
+        <h2>Verdade ou mentira?</h2>
+        <p>10 frases sobre o Amazonas. Leia, ou toque em “Ouvir”, e diga se é verdade ou mentira. Tudo o que está no jogo apareceu nesta página.</p>
+      </div>
+    </div>
+    <div class="jogo" id="caixa-jogo"></div>
+  </div>
+</section>
+
+<!-- ================= ANÁLISE E FONTES ================= -->
+<section id="fontes">
+  <div class="largura">
+    <div class="cabeca">
+      <div class="selo" aria-hidden="true">🧭</div>
+      <div>
+        <h2>O que dá para concluir</h2>
+      </div>
+    </div>
+    <div class="texto">
+      <p>De 2019 a 2022, o Amazonas viveu a crise do oxigênio, desmatamento recorde, invasão de garimpeiros e o assassinato de Bruno e Dom.</p>
+      <p>De 2023 em diante, os números mostram outro caminho: o desmatamento caiu cerca de 60%, as mortes violentas tiveram a maior queda do país, a Zona Franca bateu recordes e as operações contra o garimpo ilegal aumentaram.</p>
+      <p>E Flávio Bolsonaro? Em 7 anos no Senado, nenhum projeto próprio virou lei. Suas propostas preocupam a Zona Franca, a floresta e os povos indígenas.</p>
+      <p><strong>O Amazonas não pode voltar para trás. Olhe os dados e decida.</strong></p>
+    </div>
+    <div class="fontes">
+      <details>
+        <summary>📚 Ver de onde vieram as informações</summary>
+        <ul>
+          <li>Crise do oxigênio: Poder360, Correio Braziliense, CNN Brasil, Brasil de Fato e Fiocruz</li>
+          <li>Propostas e Zona Franca: plano de governo de Flávio Bolsonaro registrado no TSE, A Crítica e Fato Amazônico</li>
+          <li>Desmatamento: Inpe/Prodes, Imazon, Greenpeace e notas técnicas de 2021 a 2025</li>
+          <li>Operação Handroanthus: Congresso em Foco, Reuters e CartaCapital</li>
+          <li>Garimpo no Rio Madeira: Greenpeace, Amazônia Real, ((o))eco, Ibama, Mongabay e ClimaInfo</li>
+          <li>Caso Bruno e Dom: MPF, Agência Brasil e CartaCapital</li>
+          <li>Zona Franca: Suframa (valores sem descontar a inflação)</li>
+          <li>Violência: Fórum Brasileiro de Segurança Pública (Anuário) e Poder360</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Dados até 2025. Informações reunidas de fontes públicas.</footer>
+
+<nav class="paradas" aria-label="Partes do site">
+  <ol>
+    <li><a href="#mapa" data-alvo="mapa"><span aria-hidden="true">🗺️</span>Mapa</a></li>
+    <li><a href="#passado" data-alvo="passado"><span aria-hidden="true">⏳</span>Passado</a></li>
+    <li><a href="#propostas" data-alvo="propostas"><span aria-hidden="true">📜</span>Propostas</a></li>
+    <li><a href="#comparar" data-alvo="comparar"><span aria-hidden="true">⚖️</span>Comparar</a></li>
+    <li><a href="#duelo" data-alvo="duelo"><span aria-hidden="true">🆚</span>Lula x Flávio</a></li>
+    <li><a href="#jogo" data-alvo="jogo"><span aria-hidden="true">🎮</span>Jogo</a></li>
+  </ol>
+</nav>
+
+<div class="gaveta-fundo" id="gaveta-fundo"></div>
+<div class="gaveta" id="gaveta" role="dialog" aria-modal="true" aria-labelledby="gaveta-titulo">
+  <button class="fechar" id="fechar" aria-label="Fechar">✕</button>
+  <h3 id="gaveta-titulo">Sua árvore</h3>
+  <div id="arvore-gaveta"></div>
+  <p id="estagio" style="font-family:var(--display);font-size:1.4rem;font-weight:700;margin:.2rem 0"></p>
+  <p id="falta" style="color:var(--muted)"></p>
+  <ul>
+    <li>Abra os lugares do mapa</li>
+    <li>Passe pelos acontecimentos do passado</li>
+    <li>Vire os cartões das propostas</li>
+    <li>Veja os temas da comparação</li>
+    <li>Veja os temas de Lula x Flávio</li>
+    <li>Termine o jogo para a árvore dar frutos</li>
+  </ul>
+  <button class="botao-linha" id="recomecar">Recomeçar do zero</button>
+</div>
+<div class="aviso" id="aviso" role="status"></div>
+
+<script src="js/dados.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
